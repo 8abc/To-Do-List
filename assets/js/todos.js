@@ -30,3 +30,8 @@ $("input[type='text']").keypress(function(event) {
     $("ul").append("<li><span>X</span> " + todoText + " </li>");
   }
 });
+
+//makes the + fade in and out when toggling
+$(".fa-plus").click(function() {
+  $("input[type='text").fadeToggle();
+});
