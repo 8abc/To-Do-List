@@ -1,12 +1,16 @@
 import React from "react";
-import Checkbox from "./components/Checkbox";
+import Navbar from "./components/Navbar";
+import TodoItem from "./components/TodoItem";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
-    <div>
-      <Checkbox />
+    <div className="todo-list">
+      <Navbar />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
     </div>
   );
 }
