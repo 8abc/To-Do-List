@@ -1,15 +1,11 @@
 import React from "react";
 import { InputGroup, FormControl } from "react-bootstrap";
 
-function TodoItem() {
+function TodoItem(props) {
   return (
     <div className="todo-item">
-      <InputGroup className="mb-3">
-        <InputGroup.Prepend>
-          <InputGroup.Checkbox aria-label="Checkbox for following text input" />
-        </InputGroup.Prepend>
-        <FormControl aria-label="Text input with checkbox" />
-      </InputGroup>
+      <input type="checkbox" checked={props.item.completed} />
+      <p>{props.item.text}</p>
     </div>
   );
 }
