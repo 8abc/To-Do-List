@@ -5,17 +5,28 @@ import todosData from "./components/todosData";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-function App() {
-  //new array to map method
-  const todoItems = todosData.map(item => (
-    <TodoItem key={item.id} item={item} />
-  ));
-  return (
-    <div className="todo-list">
-      <Navbar />
-      {todoItems}
-    </div>
-  );
+//created a class component to add state
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      todos: todosData
+    };
+  }
+
+  render() {
+    //new array to map method
+    //we map through todosData is in state
+    const todoItems = this.state.todos.map(item => (
+      <TodoItem key={item.id} item={item} />
+    ));
+    return (
+      <div className="todo-list">
+        <Navbar />
+        {todoItems}
+      </div>
+    );
+  }
 }
 
 export default App;

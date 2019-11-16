@@ -1,5 +1,4 @@
 import React from "react";
-import { InputGroup, FormControl } from "react-bootstrap";
 
 function TodoItem(props) {
   return (
