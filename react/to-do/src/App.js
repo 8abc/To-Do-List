@@ -21,7 +21,12 @@ class App extends React.Component {
       const updatedTodos = prevState.todos.map(todo => {
         //if an item that matches an id is clicked there will be a checkbox
         if (todo.id === id) {
-          todo.completed = !todo.completed;
+          //returns a new object and flips the completed property on the next object instead of
+          //modifying the old state object
+          return {
+            ...todo,
+            completed: !todo.completed
+          };
         }
         return todo;
       });
